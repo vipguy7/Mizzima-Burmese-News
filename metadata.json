@@ -1,0 +1,5 @@
+{
+  "name": "Mizzima Reader AI",
+  "description": "A modern, New York Times-inspired news reader for Mizzima News (English & Myanmar), powered by Gemini for intelligent content aggregation and summarization.",
+  "requestFramePermissions": []
+}
