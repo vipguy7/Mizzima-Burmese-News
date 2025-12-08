@@ -11,10 +11,15 @@ export const TRANSLATIONS: Record<Language, Translation> = {
     shareSuccess: 'Link copied!',
     nav: {
       [NewsCategory.TOP_STORIES]: 'Top Stories',
-      [NewsCategory.MYANMAR]: 'Myanmar',
-      [NewsCategory.WORLD]: 'World',
+      [NewsCategory.MYANMAR]: 'Myanmar News',
+      [NewsCategory.WORLD]: 'International',
       [NewsCategory.BUSINESS]: 'Business',
       [NewsCategory.SPORT]: 'Sport',
+      [NewsCategory.OPINION]: 'Opinions',
+      [NewsCategory.TV]: 'TV Channel',
+      [NewsCategory.ENTERTAINMENT]: 'Entertainment',
+      [NewsCategory.TECH]: 'Sci-Tech',
+      [NewsCategory.LIFESTYLE]: 'Lifestyle',
     },
     footer: '© 2024 Mizzima Reader AI. Designed with New York Times aesthetics.',
     refresh: 'Update News',
@@ -61,10 +66,15 @@ export const TRANSLATIONS: Record<Language, Translation> = {
     shareSuccess: 'လင့်ခ်ကို ကူးယူပြီးပါပြီ',
     nav: {
       [NewsCategory.TOP_STORIES]: 'အထူးသတင်း',
-      [NewsCategory.MYANMAR]: 'မြန်မာ',
-      [NewsCategory.WORLD]: 'ကမ္ဘာ',
+      [NewsCategory.MYANMAR]: 'မြန်မာသတင်း',
+      [NewsCategory.WORLD]: 'နိုင်ငံတကာ',
       [NewsCategory.BUSINESS]: 'စီးပွားရေး',
       [NewsCategory.SPORT]: 'အားကစား',
+      [NewsCategory.OPINION]: 'အတွေးအမြင်',
+      [NewsCategory.TV]: 'ရုပ်သံ',
+      [NewsCategory.ENTERTAINMENT]: 'ဖျော်ဖြေရေး',
+      [NewsCategory.TECH]: 'နည်းပညာ',
+      [NewsCategory.LIFESTYLE]: 'လူနေမှုဘဝ',
     },
     footer: '© ၂၀၂၄ မဇ္ဈိမ Reader AI.',
     refresh: 'သတင်းမွမ်းမံရန်',
@@ -100,7 +110,7 @@ export const TRANSLATIONS: Record<Language, Translation> = {
     saveOffline: 'သိမ်းဆည်းမည်',
     saved: 'သိမ်းဆည်းပြီး',
     removeFromSaved: 'ဖယ်ရှားမည်',
-  }
+  },
 };
 
 export const INITIAL_ARTICLES: Article[] = [
@@ -142,3 +152,27 @@ export const LEADERBOARD_DATA: LeaderboardUser[] = [
   { rank: 4, name: 'Thida', points: 2100 },
   { rank: 5, name: 'Kyaw Zwa', points: 1950 },
 ];
+
+export const NAV_CATEGORIES: Record<Language, NewsCategory[]> = {
+  [Language.EN]: [
+    NewsCategory.TOP_STORIES,
+    NewsCategory.MYANMAR,
+    NewsCategory.WORLD,
+    NewsCategory.BUSINESS,
+    NewsCategory.OPINION,
+    NewsCategory.TV,
+    NewsCategory.SPORT,
+  ],
+  [Language.MM]: [
+    NewsCategory.TOP_STORIES,
+    NewsCategory.MYANMAR,
+    NewsCategory.WORLD,
+    NewsCategory.BUSINESS,
+    NewsCategory.ENTERTAINMENT,
+    NewsCategory.OPINION,
+    NewsCategory.TV,
+    NewsCategory.SPORT,
+    NewsCategory.TECH,
+    NewsCategory.LIFESTYLE
+  ]
+};

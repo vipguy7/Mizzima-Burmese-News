@@ -10,7 +10,12 @@ export enum NewsCategory {
   MYANMAR = 'Myanmar',
   WORLD = 'World',
   BUSINESS = 'Business',
-  SPORT = 'Sport'
+  SPORT = 'Sport',
+  OPINION = 'Opinion',
+  TV = 'TV Channel',
+  ENTERTAINMENT = 'Entertainment',
+  TECH = 'Science & Tech',
+  LIFESTYLE = 'Lifestyle'
 }
 
 export interface Article {
