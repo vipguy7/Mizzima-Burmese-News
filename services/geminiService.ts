@@ -1,10 +1,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Article, Language, NewsCategory } from '../types';
 
-const getClient = () => new GoogleGenAI({ apiKey: process.env.API_KEY });
+const getClient = () => new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || '' });
 
 // Helper to format date
-const formatDate = (lang: Language) => 
+const formatDate = (lang: Language) =>
   new Date().toLocaleDateString(lang === Language.MM ? 'my-MM' : 'en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
 const getSourceConfig = (language: Language) => {
@@ -29,7 +29,7 @@ const getSourceConfig = (language: Language) => {
 export const fetchHeroSummary = async (language: Language): Promise<string> => {
   const ai = getClient();
   const source = getSourceConfig(language);
-  
+
   const prompt = `
     Role: You are an intelligent news extraction system for ${source.name}.
     Task: Analyze the simulated content strictly from this URL: ${source.url} for the last 12 hours.
@@ -57,7 +57,7 @@ export const fetchHeroSummary = async (language: Language): Promise<string> => {
 export const fetchDailyBriefing = async (language: Language): Promise<Article[]> => {
   const ai = getClient();
   const source = getSourceConfig(language);
-  
+
   const prompt = `
     Role: You are an intelligent news extraction system for ${source.name}.
     Task: Extract and summarize 10 key headlines for a "Daily News Briefing" from ${source.url}.
@@ -99,7 +99,7 @@ export const fetchDailyBriefing = async (language: Language): Promise<Article[]>
     });
 
     const rawData = JSON.parse(response.text || '[]');
-    
+
     return rawData.map((item: any, index: number) => ({
       id: `briefing-${Date.now()}-${index}`,
       title: item.title,
@@ -122,7 +122,7 @@ export const fetchNewsFeed = async (language: Language, category: NewsCategory, 
   const ai = getClient();
   const source = getSourceConfig(language);
   const count = 5;
-  
+
   const prompt = `
     Role: You are an intelligent news extraction system for ${source.name}.
     Source URL: ${source.url}
@@ -163,7 +163,7 @@ export const fetchNewsFeed = async (language: Language, category: NewsCategory, 
     });
 
     const rawData = JSON.parse(response.text || '[]');
-    
+
     return rawData.map((item: any, index: number) => ({
       id: `feed-${page}-${Date.now()}-${index}`,
       title: item.title,
