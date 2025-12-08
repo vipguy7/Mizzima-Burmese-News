@@ -34,8 +34,8 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={() => setLanguage(Language.EN)}
             className={`flex-1 md:flex-none md:w-48 py-3 text-center text-xs md:text-sm uppercase tracking-widest font-bold transition-all border-t-2 ${language === Language.EN
-                ? 'bg-white text-brand-black border-brand-black shadow-[0_-1px_4px_rgba(0,0,0,0.05)] translate-y-[1px]'
-                : 'bg-brand-gray text-gray-500 border-transparent hover:text-gray-800'
+              ? 'bg-white text-brand-black border-brand-black shadow-[0_-1px_4px_rgba(0,0,0,0.05)] translate-y-[1px]'
+              : 'bg-brand-gray text-gray-500 border-transparent hover:text-gray-800'
               }`}
           >
             English News
@@ -45,8 +45,8 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={() => setLanguage(Language.MM)}
             className={`flex-1 md:flex-none md:w-48 py-3 text-center text-xs md:text-sm uppercase tracking-widest font-bold transition-all border-t-2 ${language === Language.MM
-                ? 'bg-white text-brand-black border-brand-black shadow-[0_-1px_4px_rgba(0,0,0,0.05)] translate-y-[1px]'
-                : 'bg-brand-gray text-gray-500 border-transparent hover:text-gray-800'
+              ? 'bg-white text-brand-black border-brand-black shadow-[0_-1px_4px_rgba(0,0,0,0.05)] translate-y-[1px]'
+              : 'bg-brand-gray text-gray-500 border-transparent hover:text-gray-800'
               }`}
           >
             မြန်မာသတင်း
@@ -93,7 +93,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           {/* Desktop Nav */}
-          <ul className={`md:flex md:justify-center md:space-x-8 md:py-3 text-sm font-bold tracking-wide transition-all ${isMenuOpen ? 'block pb-4' : 'hidden'}`}>
+          <ul className={`md:flex md:flex-wrap md:justify-center md:gap-x-6 md:gap-y-3 md:py-4 text-sm font-bold tracking-wide transition-all ${isMenuOpen ? 'block pb-4' : 'hidden'}`}>
             {categories.map((category) => (
               <li key={category} className="border-b md:border-none border-gray-100 last:border-none">
                 <button
@@ -102,8 +102,8 @@ export const Header: React.FC<HeaderProps> = ({
                     setIsMenuOpen(false);
                   }}
                   className={`block w-full text-left md:inline-block md:w-auto py-3 md:py-0 px-2 transition-colors ${activeCategory === category
-                      ? 'text-black border-b-2 border-black md:pb-1'
-                      : 'text-gray-500 hover:text-black'
+                    ? 'text-black border-b-2 border-black md:pb-1'
+                    : 'text-gray-500 hover:text-black'
                     }`}
                 >
                   {t.nav[category]}

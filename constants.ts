@@ -20,6 +20,11 @@ export const TRANSLATIONS: Record<Language, Translation> = {
       [NewsCategory.ENTERTAINMENT]: 'Entertainment',
       [NewsCategory.TECH]: 'Sci-Tech',
       [NewsCategory.LIFESTYLE]: 'Lifestyle',
+      [NewsCategory.ENVIRONMENT]: 'Environment',
+      [NewsCategory.FEATURES]: 'Features',
+      [NewsCategory.WOMEN]: 'Women',
+      [NewsCategory.YOUTH]: 'Youth',
+      [NewsCategory.PHOTO]: 'Photo Essays',
     },
     footer: '© 2024 Mizzima Reader AI. Designed with New York Times aesthetics.',
     refresh: 'Update News',
@@ -75,6 +80,11 @@ export const TRANSLATIONS: Record<Language, Translation> = {
       [NewsCategory.ENTERTAINMENT]: 'ဖျော်ဖြေရေး',
       [NewsCategory.TECH]: 'နည်းပညာ',
       [NewsCategory.LIFESTYLE]: 'လူနေမှုဘဝ',
+      [NewsCategory.ENVIRONMENT]: 'သဘာဝပတ်ဝန်းကျင်',
+      [NewsCategory.FEATURES]: 'ဆောင်းပါး',
+      [NewsCategory.WOMEN]: 'အမျိုးသမီး',
+      [NewsCategory.YOUTH]: 'လူငယ်',
+      [NewsCategory.PHOTO]: 'ဓာတ်ပုံသတင်း',
     },
     footer: '© ၂၀၂၄ မဇ္ဈိမ Reader AI.',
     refresh: 'သတင်းမွမ်းမံရန်',
@@ -162,6 +172,9 @@ export const NAV_CATEGORIES: Record<Language, NewsCategory[]> = {
     NewsCategory.OPINION,
     NewsCategory.TV,
     NewsCategory.SPORT,
+    NewsCategory.ENVIRONMENT,
+    NewsCategory.FEATURES,
+    NewsCategory.PHOTO,
   ],
   [Language.MM]: [
     NewsCategory.TOP_STORIES,
@@ -173,6 +186,11 @@ export const NAV_CATEGORIES: Record<Language, NewsCategory[]> = {
     NewsCategory.TV,
     NewsCategory.SPORT,
     NewsCategory.TECH,
-    NewsCategory.LIFESTYLE
+    NewsCategory.LIFESTYLE,
+    NewsCategory.ENVIRONMENT,
+    NewsCategory.FEATURES,
+    NewsCategory.WOMEN,
+    NewsCategory.YOUTH,
+    NewsCategory.PHOTO
   ]
 };

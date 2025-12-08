@@ -15,7 +15,12 @@ export enum NewsCategory {
   TV = 'TV Channel',
   ENTERTAINMENT = 'Entertainment',
   TECH = 'Science & Tech',
-  LIFESTYLE = 'Lifestyle'
+  LIFESTYLE = 'Lifestyle',
+  ENVIRONMENT = 'Environment',
+  FEATURES = 'Features',
+  WOMEN = 'Women',
+  YOUTH = 'Youth',
+  PHOTO = 'Photo Essay'
 }
 
 export interface Article {
